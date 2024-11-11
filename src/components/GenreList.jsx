@@ -8,7 +8,7 @@ const GenreList = () => {
   const getGenres = async () => {
     // Get genres from API
     getGenresList.then((response) => {
-      console.log(response.data.results);
+      // console.log(response.data.results);
       setGenres(response.data.results);
     });
   };
