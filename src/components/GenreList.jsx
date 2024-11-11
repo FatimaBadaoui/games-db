@@ -25,8 +25,8 @@ const GenreList = () => {
           <div
             key={genre.id}
             onClick={() => setActiveIndex(index)}
-            className={`flex items-center gap-2 mb-2 cursor-pointer p-2 rounded-lg hover:bg-gray-300 hover:dark:bg-gray-600 group ${
-              activeIndex === index ? "bg-gray-300 dark:bg-gray-600" : ""
+            className={`flex items-center gap-2 mb-2 cursor-pointer p-2 rounded-lg hover:bg-[#ff367c7b] ${
+              activeIndex === index ? "bg-lightPink" : ""
             }`}
           >
             <img

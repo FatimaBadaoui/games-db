@@ -8,8 +8,13 @@ const Header = () => {
 
   return (
     <div className="flex items-center p-3">
-      <img src={logo} alt="logo" width={100} />
-      <div className="flex p-2 w-full items-center bg-slate-200 mx-5 rounded-full">
+      <img
+        src={logo}
+        alt="logo"
+        width={100}
+        className="rounded-full object-cover"
+      />
+      <div className="flex p-2 w-full items-center bg-cloud mx-5 rounded-full">
         <HiMagnifyingGlass />
         <input
           type="search"
@@ -21,7 +26,7 @@ const Header = () => {
       <div className="cursor-pointer">
         {theme == "light" ? (
           <HiSun
-            className="text-[35px] bg-slate-200 text-black p-1 rounded-full"
+            className="text-[35px] bg-cloud text-black p-1 rounded-full"
             onClick={() => {
               setTheme("dark");
               localStorage.setItem("theme", "dark");
