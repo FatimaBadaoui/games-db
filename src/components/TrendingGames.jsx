@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 const TrendingGames = ({ gamesList }) => {
   return (
     <div className="mt-5 hidden md:block">
@@ -30,3 +32,13 @@ const TrendingGames = ({ gamesList }) => {
 };
 
 export default TrendingGames;
+
+TrendingGames.propTypes = {
+  gamesList: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      background_image: PropTypes.string.isRequired,
+      name: PropTypes.string.isRequired,
+    })
+  ).isRequired,
+};

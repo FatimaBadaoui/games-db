@@ -3,6 +3,7 @@ import GenreList from "../components/GenreList.jsx";
 import { getAllGames } from "../services/globalApi.js";
 import Banner from "../components/Banner.jsx";
 import TrendingGames from "../components/TrendingGames.jsx";
+import GamesByGenre from "../components/GamesByGenre.jsx";
 
 const Home = () => {
   const [gamesList, setGamesList] = useState([]);
@@ -28,6 +29,7 @@ const Home = () => {
           <>
             <Banner gameBanner={gamesList[0]} />
             <TrendingGames gamesList={gamesList} />
+            <GamesByGenre gamesList={gamesList} />
           </>
         )}
       </div>
