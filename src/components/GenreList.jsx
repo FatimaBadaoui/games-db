@@ -29,6 +29,7 @@ const GenreList = ({ getGamesByGenreId, selectedGenreName }) => {
               setActiveIndex(index);
               getGamesByGenreId(genre.id);
               selectedGenreName(genre.name);
+              window.scrollTo({ top: 0, behavior: "smooth" });
             }}
             className={`flex items-center gap-2 mb-2 cursor-pointer p-2 rounded-lg hover:bg-[#ff367c7b] ${
               activeIndex === index ? "bg-lightPink" : ""
