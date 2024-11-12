@@ -27,7 +27,7 @@ const Home = () => {
   useEffect(() => {
     getAllGamesList();
     getGamesByGenresId(4);
-  }, [selectedGenre]);
+  }, []);
 
   return (
     <div className="grid grid-cols-4 px-8">
