@@ -1,7 +1,8 @@
+/* eslint-disable react/prop-types */
 import { useEffect, useState } from "react";
 import { getGenresList } from "../services/globalApi.js";
 
-const GenreList = () => {
+const GenreList = ({ getGamesByGenreId, selectedGenreName }) => {
   const [genres, setGenres] = useState([]);
   const [activeIndex, setActiveIndex] = useState(0);
 
@@ -24,7 +25,11 @@ const GenreList = () => {
         genres.map((genre, index) => (
           <div
             key={genre.id}
-            onClick={() => setActiveIndex(index)}
+            onClick={() => {
+              setActiveIndex(index);
+              getGamesByGenreId(genre.id);
+              selectedGenreName(genre.name);
+            }}
             className={`flex items-center gap-2 mb-2 cursor-pointer p-2 rounded-lg hover:bg-[#ff367c7b] ${
               activeIndex === index ? "bg-lightPink" : ""
             }`}

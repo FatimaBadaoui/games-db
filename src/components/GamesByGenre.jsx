@@ -1,7 +1,10 @@
-const GamesByGenre = ({ gamesList }) => {
+/* eslint-disable react/prop-types */
+const GamesByGenre = ({ gamesList, genreName }) => {
   return (
     <div className="mt-5">
-      <h2 className="font-bold dark:text-whitish text-[30px]">Popular Games</h2>
+      <h2 className="font-bold dark:text-whitish text-[30px]">
+        {genreName} Games
+      </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-5">
         {gamesList.length &&
           gamesList.map((game) => (
