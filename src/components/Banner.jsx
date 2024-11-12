@@ -1,16 +1,12 @@
-import PropTypes from "prop-types";
+/* eslint-disable react/prop-types */
 
-const Banner = ({ gameBanner }) => {
-
+const Banner = ({ gameBanner, genreName }) => {
   return (
     <div className="relative">
-      <div className="absolute bottom-0 p-5 bg-gradient-to-t from-slate-900 to-transparent rounded-xl">
-        <h2 className="text-[24px] font-bold text-whitish">
-          {gameBanner.name}
+      <div className="absolute bottom-0 w-full p-5 bg-gradient-to-t from-slate-900 to-transparent rounded-xl">
+        <h2 className="text-[40px] font-bold text-whitish">
+          {genreName} Games
         </h2>
-        <button className="bg-lightBlue text-whitish px-2 p-1 rounded-lg">
-          Get Now
-        </button>
       </div>
       <img
         src={gameBanner.background_image}
@@ -22,10 +18,3 @@ const Banner = ({ gameBanner }) => {
 };
 
 export default Banner;
-
-Banner.propTypes = {
-  gameBanner: PropTypes.shape({
-    name: PropTypes.string.isRequired,
-    background_image: PropTypes.string.isRequired,
-  }).isRequired,
-};
