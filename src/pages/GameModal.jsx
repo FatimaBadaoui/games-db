@@ -19,6 +19,10 @@ const GameModal = () => {
             width: "70%",
             height: "500px",
             margin: "auto",
+            borderRadius: "10px",
+            overflowY: "scroll",
+            scrollbarColor: "#ff367e #011e39",
+            scrollbarWidth: "thin",
           },
         }}
       >
