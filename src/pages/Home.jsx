@@ -10,11 +10,8 @@ const Home = () => {
   const [genreId, setGenreId] = useState(4);
   const [page, setPage] = useState(1);
 
-  console.log(page);
-
   const getGamesByGenresId = (genreId, pageNumber) => {
     getGamesByGenre(genreId, pageNumber).then((response) => {
-      console.log(genreId, pageNumber);
       setGenreId(genreId);
       setGamesListByGenre(response.data.results);
     });
