@@ -1,5 +1,10 @@
+import { useContext } from "react";
+import { ModalContext } from "../context/ModalContext.jsx";
+
 /* eslint-disable react/prop-types */
 const GamesByGenre = ({ gamesList }) => {
+  const { setIsOpen, setModalContent } = useContext(ModalContext);
+
   return (
     <div className="mt-10">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-5">
@@ -7,6 +12,10 @@ const GamesByGenre = ({ gamesList }) => {
           gamesList.map((game) => (
             <div
               key={game.id}
+              onClick={() => {
+                setIsOpen(true);
+                setModalContent(game);
+              }}
               className="h-[300px] bg-gray-300 dark:bg-gray-600 p-3 rounded-lg pb-6 dark:text-whitish hover:scale-105 transition-all ease-in-out duration-300 cursor-pointer"
             >
               <img

@@ -1,8 +1,10 @@
-import { useEffect, useState } from "react";
 import "./App.css";
+import { useEffect, useState } from "react";
 import Home from "./pages/Home.jsx";
 import Header from "./components/Header.jsx";
 import { ThemeContext } from "./context/ThemeContext.jsx";
+import ModalProvider from "./context/ModalContext.jsx";
+import GameModal from "./pages/GameModal.jsx";
 
 function App() {
   const [theme, setTheme] = useState("light");
@@ -16,10 +18,13 @@ function App() {
 
   return (
     <ThemeContext.Provider value={{ theme, setTheme }}>
-      <div className={`${theme} ${theme == "dark" ? "bg-bgDark" : null}`}>
-        <Header />
-        <Home />
-      </div>
+      <ModalProvider>
+        <div className={`${theme} ${theme == "dark" ? "bg-bgDark" : null}`}>
+          <Header />
+          <Home />
+          <GameModal />
+        </div>
+      </ModalProvider>
     </ThemeContext.Provider>
   );
 }
