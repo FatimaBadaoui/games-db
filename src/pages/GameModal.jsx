@@ -17,7 +17,7 @@ const GameModal = () => {
           content: {
             backgroundColor: "#011e39",
             width: "70%",
-            height: "500px",
+            height: "600px",
             margin: "auto",
             borderRadius: "10px",
             overflowY: "scroll",
