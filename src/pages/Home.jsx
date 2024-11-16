@@ -23,7 +23,7 @@ const Home = () => {
 
   return (
     <div className="grid grid-cols-4 px-8">
-      <div className="hidden md:block">
+      <div className="col-span-4 md:col-span-1">
         <GenreList
           getGamesByGenreId={(genreId) => getGamesByGenresId(genreId, 1)}
           selectedGenreName={(genreName) => setSelectedGenre(genreName)}
