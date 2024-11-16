@@ -1,4 +1,4 @@
-# Games DB
+# Games DB - [live Demo](https://games-db-e79g.onrender.com/)
 
 A modern web application built with React and Vite that allows users to explore and discover video games using the RAWG Video Games Database API.
 
